@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            border: 0;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            column-gap: 100px;
+            max-width: 90%;
+        }
+
+        .grid-item picture {
+            position: relative;
+        }
+        .grid-item .text {
+            /* display: block; */
+            position: absolute;
+            top: 50%;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-size: 20px;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            color: wheat;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="grid">
+        <div class="grid-item">
+            <picture>
+                <img srcset="image-header-desktop.jpg 540w,
+                image-header-mobile.jpg 654w"
+                
+                sizes="(max-width: 1000px) 654px
+                540px"
+                
+                src="./image-header-desktop.jpg" alt="Meeting" style="width: 100%;">
+            </picture>
+            <div class="text">
+                <h1>This is a Test</h1>
+                <p>This is a test paragraph because i suck positioning things with CSS. I hope i do it well this time. Thanks.</p>
+            </div>
+        </div>
+
+        <div class="grid-item">
+            <picture>
+                <img srcset="image-header-desktop.jpg 540w,
+                image-header-mobile.jpg 654w"
+                
+                sizes="(max-width: 1000px) 654px
+                540px"
+                
+                src="./image-header-desktop.jpg" alt="Meeting" style="width: 100%;">
+            </picture>
+        </div>
+    </div>
+    
+</body>
+</html>
